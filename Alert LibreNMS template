@@ -1,0 +1,19 @@
+{{ $alert->title }}
+Location: {{ $alert->location }}
+IP: {{ $alert->ip }}
+
+Severity: {{ $alert->severity }}
+State: {{ $alert->state }}
+Time: {{ $alert->timestamp }}
+
+Rule: @if ($alert->name) {{ $alert->name }} @else {{ $alert->rule }} @endif
+@if ($alert->faults) Faults:
+@foreach ($alert->faults as $key => $value)
+  {{ $key }}: {{ $value['string'] }}
+@endforeach
+@endif
+
+Additional Info:
+@foreach ($alert->faults as $key => $value)
+- #{{ $key+1 }}: {{ $value['sensor_descr'] }} - {{ $value['state_descr'] }}
+@endforeach

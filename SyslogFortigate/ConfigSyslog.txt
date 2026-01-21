@@ -1,0 +1,41 @@
+set facility syslog
+
+set source-ip "192.168.1.99"
+
+end
+
+config log syslogd2 setting
+
+    set status enable
+
+    set server "IP ของ Server Wazuh ตัวที่ 2"
+
+    set facility syslog
+
+    set source-ip "192.168.1.99"
+
+end
+
+config log syslogd3 setting
+
+    set status enable
+
+    set server "IP ของ Server Wazuh ตัวที่ 3"
+
+    set facility syslog
+
+    set source-ip "192.168.1.99"
+
+end
+
+config log syslogd4 setting
+
+    set status enable
+
+    set server "IP ของ Server Wazuh ตัวที่ 4"
+
+    set facility syslog
+
+    set source-ip "192.168.1.99"
+
+end
